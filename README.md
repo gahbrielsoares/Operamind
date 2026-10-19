@@ -1,8 +1,19 @@
-# operamind
+# BloomAI (Operamind Acad.)
 
-# BloomAI — Aprendizado Adaptativo com Taxonomia de Bloom
+**Aprendizado adaptativo com LLMs, guiado pela Taxonomia de Bloom.**
 
-> MVP funcional baseado em: **Soares, G.J.S. (2025)** — *Aprendizado Adaptativo com Grandes Modelos de Linguagem: Uma Abordagem Baseada na Taxonomia de Bloom*
+O estudante digita um tema e o sistema gera questões com IA no nível cognitivo certo para ele. Acertou três seguidas, sobe de nível. Errou, recebe uma questão mais simples sobre o mesmo ponto. Ao longo da sessão, um modelo de Bayesian Knowledge Tracing estima a probabilidade de domínio do conteúdo.
+
+> MVP baseado em: **Soares, G.J.S. (2025)**, *Aprendizado Adaptativo com Grandes Modelos de Linguagem: Uma Abordagem Baseada na Taxonomia de Bloom*.
+
+## Destaques técnicos
+
+- **Engenharia de prompt por nível cognitivo:** few-shot com os verbos de Krathwohl para cada nível de Bloom, com saída estruturada em JSON.
+- **Máquina de estados adaptativa:** progressão após 3 acertos consecutivos e regressão em até 5 níveis, com módulo de remediação.
+- **Bayesian Knowledge Tracing:** modelo com 4 parâmetros (pL, pT, pS, pG) atualizado a cada resposta.
+- **Analytics:** dashboard com KPIs, gráficos e desempenho por participante, filtrável por tema.
+
+**Stack:** JavaScript, HTML/CSS, API da Anthropic (Claude), Google Apps Script
 
 ---
 
